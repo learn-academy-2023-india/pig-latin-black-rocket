@@ -12,12 +12,15 @@ const App = () => {
   // ACTION ITEM: the "myPigLatinCodeHere" function is where you will put your logic to translate the sentence entered by the user into Pig Latin
   const myPigLatinCodeHere = () => {
     // NO MODIFICATION NEEDED: the variable "arrayOfUserInput" will contain the text input from the user split into an array of words
+    /* const splitting the string to individual strings, or string into characters */
+    /* this is where our split array is located */
     const arrayOfUserInput = userInput.split(" ")
     console.log("arrayOfUserInput:", arrayOfUserInput)
 
     // NO MODIFICATION NEEDED: now that we have an array of words, we can map over the array and look at each word
     const translatedWordsArray = arrayOfUserInput.map((eachWord) => {
       console.log("eachWord:", eachWord)
+      console.log(translatedWordsArray)
 
       // NO MODIFICATION NEEDED: this code will look at each word and identify the vowels
       const vowelsArray = eachWord.split("").filter((vowel) => {
@@ -32,6 +35,49 @@ const App = () => {
       console.log("vowelsArray:", vowelsArray)
 
       // ACTION ITEM: your Pig Latin logic goes here!
+      // Pseudo code:
+      // input: vowel
+      // output: vowel + suffix + ay or way
+      // for loop: i = 0; i > eachWord.length; i++
+      // if([vowel] === first vowel) 
+      // prefix: eachWord.vowel[0].split()
+      // suffix: 
+      // join prefix + suffix or letter
+      // else if this.vowel + suffix or letter + "ay"
+      // else if "qu" + suffix  or letter + "ay"
+      // else if "y" + (suffix) + "ay"
+      // else if eachWord.vowel[eachWord.length - 1] === y
+      // else vowel + "way" 
+      // action needed for onClick()
+
+      const selectWord = (vowel) => {
+        for(let i = 0; i > eachWord.length; i++)
+        if(eachWord.vowel[0] ===  "a") {
+          return true
+        }
+      }
+      console.log(selectWord)
+
+      // const letterOnly = (array) => {
+      //   let onlyStringsArray = array.filter(value => {
+      //     console.log(typeof value)
+      //     return typeof value === "string"
+      //   }).join("") // .toUpperCase 
+      // }
+
+//       var greetings = ["hello", "yo", "hola", "hey"]
+// var cohorts = ["alpha", "bravo", "echo", "india"]
+
+const upcasingArrayOfStrings = (arrayOfStrings) => {
+	let collectionArray = [ ]
+	for(let i = 0; i < arrayOfStrings.length; i++){
+		return vowel[0].push(prefixArray)
+	}
+}	
+
+      var beverage = ["lemonade", "water", "Grey Goose", "Arnold Palmer"]
+console.log(dinner.concat(beverage))
+console.log(dinner)
 
       // ACTION ITEM: this return will be the output of your Pig Latin'd code
       return eachWord
@@ -86,7 +132,7 @@ const App = () => {
         </div>
         <p>{inputTranslated}</p>
       </div>
-      <footer>&copy; 2023 | Coded by: Your Names Here!</footer>
+      <footer>&copy; 2023 | Coded by: Isaac V and Jeremie J!</footer>
     </div>
   )
 }
